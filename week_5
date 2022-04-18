@@ -1,0 +1,36 @@
+/*
+Question 1: Create a constructor for a Car object. Each Car object should contain the 
+following properties: model, year, color, and mpg. Use the constructor to create 3 different 
+Car objects. Print out the mpg of each car to the console. 
+*/
+function Car(model, year, color, mpg) {
+    this.model = model;
+    this.year = year;
+    this.color = color;
+    this.mpg = mpg;
+}
+
+var camry = new Car("Toyota Camry", 2021, "Silver", 39.0);
+var civic = new Car("Honda Civic", 2022, "Blue", 37.0);
+var malibu = new Car("Chevy Malibu", 2016, "Silver", 28.4);
+
+console.log(camry.mpg);
+console.log(civic.mpg);
+console.log(malibu.mpg);
+
+/*
+Question 2: Create a constructor for a Vehicle object. Each Vehicle object should contain only 
+one property: car. Using the 3 Car objects you created previously, create 3 Vehicle objects. 
+Print out the mpg of the car property in each Vehicle object.
+*/
+function Vehicle(car) {
+    this.car = car;
+}
+
+var priusVehicle = new Vehicle(camry);
+var fusionVehicle = new Vehicle(civic);
+var accordVehicle = new Vehicle(malibu);
+
+console.log(priusVehicle.car.mpg);
+console.log(fusionVehicle.car.mpg);
+console.log(accordVehicle.car.mpg);

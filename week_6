@@ -1,0 +1,44 @@
+//Question 1
+function reverse(string) {
+    var reversedString = "";
+    for (var i = string.length - 1; i >= 0; i--) {
+        reversedString += string[i];
+    }
+    return reversedString;
+}
+console.log(reverse("League"));
+console.log(reverse("of")); 
+console.log(reverse("Legends")); 
+
+
+//Question 2
+function numVowels(string) {
+    var numVowels = 0;
+    string = string.toLowerCase();
+    for (var i = 0; i < string.length; i++) {
+        var currentCharacter = string[i];
+        if (currentCharacter === "a" || currentCharacter === "e" || currentCharacter === "i"
+            || currentCharacter === "o" || currentCharacter === "u") {
+                numVowels++;
+            }
+    }
+    return numVowels;
+}
+console.log(numVowels("SquareEnix"));
+console.log(numVowels("Octopath")); 
+console.log(numVowels("Traveler")); 
+
+
+//Question 3
+function numStringsShorterThanLength(strings, length) {
+    var numStringsShorterThanLength = 0;
+    for (var i = 0; i < strings.length; i++) {
+        if (strings[i].length < length) {
+            numStringsShorterThanLength++;
+        }
+    }
+    return numStringsShorterThanLength;
+}
+console.log(numStringsShorterThanLength(["I", "love", "videogames"], 4)); 
+console.log(numStringsShorterThanLength(["Nintendo", "is", "better", "than", "Microsoft"], 5)); 
+console.log(numStringsShorterThanLength(["Breath", "of", "the", "Wild", "2"], 3)); 
